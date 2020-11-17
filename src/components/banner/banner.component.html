@@ -1,0 +1,27 @@
+
+<div *ngIf="product.type === 'plan' && product.show"
+    [ngStyle] ="{'background-image': 'url(' + product.backgroundImg + ')',
+                'background-size': 'cover',
+                'background-position': 'top'}"
+     class="bannerCtnPLan">
+     <div class="contentCtn">
+        <p class="descTxt">
+            {{product.productDescription}}
+         </p>
+         <a href="{{product.link}}" class="linkBtn">
+             {{product.buttonText}} <i class="fas fa-long-arrow-alt-right"></i>
+         </a>
+     </div>
+</div>
+
+<div *ngIf="product.type === 'cellphone' && product.show" class="bannerCtnProduct">
+    <img src={{product.productImg}} class="cellphoneImg">
+    <div class="cellContentCtn">
+        <p class="cellphoneName">
+            {{product.productName}}
+         </p>
+        <p class="cellphoneDescription">
+            {{product.productDescription}}
+         </p>
+     </div>
+</div>

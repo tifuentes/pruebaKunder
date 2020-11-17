@@ -1,0 +1,109 @@
+
+/*  --- CSS FOR PLAN TYPE BANNER --- */
+.bannerCtnPLan{
+    height: 400px;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 0.2rem;
+    animation: moveInLeft 1s ease-out;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.contentCtn{
+    position: absolute;
+    right: 20%;
+    top: 60%;
+    transform: translateY(-50%);
+    margin-left: 25px;
+}
+.linkBtn{
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: rgba(18,207,101,.9);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    float: right;
+}
+.linkBtn:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background-color: #00b85f;
+}
+.descTxt{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    max-width: 450px;
+}
+
+/*  --- CSS FOR CELLPHONE TYPE BANNER --- */
+.bannerCtnProduct{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 0.2rem;
+    border: 1px solid #e4e4e4;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation: moveInLeft 1s ease-out;
+}
+.cellphoneName{
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #ec3223;
+    max-width: fit-content;
+    padding: 10px 10px 10px 20px;
+    border-radius: 2px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10px 50%);
+}
+.cellphoneDescription{
+    color:black;
+    font-size: 16px;
+}
+.cellContentCtn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -100px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80% {
+        transform:translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@media (max-width: 450px) {
+    .bannerCtnProduct{
+        flex-direction: column;
+    }
+    .cellContentCtn{
+    margin-top: 0px;
+    }
+    .cellContentCtn{
+        padding-left: 20px;
+    }
+    .cellphoneImg{
+        min-width: 100%;;
+    }
+}
